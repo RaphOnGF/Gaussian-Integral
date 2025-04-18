@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xcolor} % Allows color manipulation
+\usepackage{pagecolor} % Allows changing the background color of pages
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+
+\definecolor{mycolor}{rgb}{0,0,0} % Text color (white)
+\definecolor{bgcolor}{rgb}{1,1,1} % Background color (black)
+\pagecolor{bgcolor} % Apply background color
+\color{mycolor} % Apply text color
+
+\title{Gaussian Integral}
+
+\begin{document}
+
+\section{}
+\[I=\int^{+\infty}_{-\infty} \; e^{-x^2} \; dx\]
+\[I^2=\int^{+\infty}_{-\infty}\int^{+\infty}_{-\infty} \; e^{-x^2}e^{-y^2}\; dx \, dy\]
+\[= \int^{+\infty}_{-\infty}\int^{+\infty}_{-\infty} \; e^{-(x^2+y^2)} \; dx \, dy\]
+\[=\int_0^{2\pi}\int_0^{\infty} \; e^{-r^2} \; r \, dr \, d\theta\]
+\[=\int_0^{2\pi} \; d\theta \cdot \int_0^{\infty} \; e^{-r^2} \; r \, dr\]
+\[=2\pi \cdot \int_0^{\infty} \; re^{-r^2} \;  dr\]
+\\
+\[\int_0^{\infty} \; re^{-r^2} \; dr\]
+Let $u=r^2$ so that $du=2r\,dr$
+\[\int_0^{\infty} \; re^{-r^2} \; dr=\int_0^{\infty} \; e^{-u} \; \frac{du}{2}\]
+\[=\frac{1}{2}\int_0^{\infty} \; e^{-u} \; du\]
+\[=\frac{1}{2}\] \\
+\\
+\\
+\\
+\\
+
+We substitute into the expression:
+\[2\pi \cdot \frac{1}{2}\]
+\[=\pi\]
+Therefore:
+\[I^2=\pi\]
+\[I=\sqrt{\pi}\]
+\end{document}
